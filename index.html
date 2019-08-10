@@ -29,28 +29,5 @@
 </main>
 
 <script src="js/brain.js"> </script>
-<script>
-		
-	$("#add").click(adding);
-
-	function adding(){
-		if ($("#ifield").val().length == 0) {
-			alert("Please write a task description");
-		}
-		else{
-		$("#result").append(`<div class = "newtasks" title = "r"> <div class = "small"> ${$("#ifield").val()} </div>
-			<button class = "yes"> ✓</button>
-			<button class = "no"> ✗ </button>` );
-
-		drag();
-
-		var n = $(".newtasks").length;
-		$("#open").text(n);
-
-		$(".yes").click(paint);
-		$(".no").click(remove1);
-	}
-	}
-</script>
 </body>
 </html>

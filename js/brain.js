@@ -1,4 +1,24 @@
+		
+	$("#add").click(adding);
 
+	function adding(){
+		if ($("#ifield").val().length == 0) {
+			alert("Please write a task description");
+		}
+		else{
+		$("#result").append(`<div class = "newtasks" title = "r"> <div class = "small"> ${$("#ifield").val()} </div>
+			<button class = "yes">  &#10003</button>
+			<button class = "no">  &#10005 </button>` );
+
+		drag();
+
+		var n = $(".newtasks").length;
+		$("#open").text(n);
+
+		$(".yes").click(paint);
+		$(".no").click(remove1);
+	}
+	}
 function paint(){
 	$(this).closest(".newtasks").css("background-color", "#363357");
 	$(this).closest(".newtasks").prop("title", "p");
