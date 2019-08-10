@@ -40,7 +40,7 @@ $("#choose").on("change", function(){
 	var change = $("#choose").val();
 	var open = $(".newtasks[title = 'p']");
 	var closed = $(".newtasks[title = 'r']");
-
+	var i = 0;
 
 
 	switch(change){
@@ -49,16 +49,22 @@ $("#choose").on("change", function(){
 		open.css("display","flex");
 		closed.css("display", "none");
 		console.log("i was triggered");
+		 i = open.length; 
+		 $("#open").text(i);
 		break;
 
 		case "not":
 		open.css("display","none");
 		closed.css("display", "flex");
+		i = closed.length;
+		 $("#open").text(i);
 		break;
 
 		case "all":
 		open.css("display","flex");
 		closed.css("display", "flex");
+		i = $(".newtasks").length;
+		 $("#open").text(i);
 		break;
 
 	};

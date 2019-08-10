@@ -100,12 +100,14 @@ span{
 	font-size: 3vw;
 }
 #open{
-	float: right;
+	float: left;
 	font-size: 4vw;
 	padding-right: 11vw;
+	margin-left: 1%;
 }
 #task{
 	font-size: 4vw;
+	float: left;
 }
 .empty{
 	display: none;
@@ -113,9 +115,12 @@ span{
 #choose{
 	width: 25%;
 	border-radius: 6px;
-	display: flex;
-	margin-left: 11vw;
-	margin-top: 2vw;
+	float: right;
+	margin-top: 1.5vw;
+	margin-bottom: 3vw;
 	background-color: lightgrey;
+	margin-right: 11vw;
 	color: #363357;
+	height: auto;
+	font-size: 1.5vw;
 }
