@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<title>Codereview06</title>
+</head>
+<body>
+<header>
+	<h1>TO-DO LIST</h1>
+</header>
+
+<main>
+	<div id="first">
+		<input id="ifield" type="text" value="" placeholder="Task description...">
+		<button id="add">Add task</button>
+	</div>
+
+	<span id="task">Tasks:</span>
+	<span id="open"></span>
+ 	<select id="choose">
+	<option value="all"> All Tasks</option>
+	<option value="done">Done Tasks</option>
+	<option value="not">Open Tasks</option>
+</select> 
+	<div id="result"></div>
+</div>
+</main>
+
+<script src="js/brain.js"> </script>
+<script>
+		
+	$("#add").click(adding);
+
+	function adding(){
+		if ($("#ifield").val().length == 0) {
+			alert("Please write a task description");
+		}
+		else{
+		$("#result").append(`<div class = "newtasks" title = "r"> <div class = "small"> ${$("#ifield").val()} </div>
+			<button class = "yes"> ✓</button>
+			<button class = "no"> ✗ </button>` );
+
+		drag();
+
+		var n = $(".newtasks").length;
+		$("#open").text(n);
+
+		$(".yes").click(paint);
+		$(".no").click(remove1);
+	}
+	}
+</script>
+</body>
+</html>
